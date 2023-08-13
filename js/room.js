@@ -2,9 +2,19 @@ class Room{
     roomType
     roomNumber
     obstacle
-    constructor(roomType, roomNumber){
-        this.roomType=roomType
+    correctDoor
+    constructor(roomNumber){
+        if(roomNumber <=14){
+            this.roomType = "Early"
+        }
+        else if(roomNumber <30){
+            this.roomType = "Mid"
+        }
+        else {
+            this.roomType = "Late"
+        }
         this.roomNumber = roomNumber
+        this.correctDoor = Math.floor(Math.random() * 3)
         // TODO: Generate a random obstacle here, and store to this.obstacle based on room difficulity
         // TODO: Make difficulty of obstacle based on room number
     }

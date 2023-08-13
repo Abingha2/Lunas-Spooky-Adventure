@@ -1,12 +1,14 @@
 class Door{
     element;
-    constructor(callback){
+    constructor(doorNum,callback){
         this.element=document.createElement("input")
         this.element.type = "button"
         this.element.classList.add("door")
-        this.element.addEventListener("click",callback)
+        this.element.addEventListener("click",async () => {
+            await callback(doorNum)
+        })
         const doorContainer = root.querySelector("#choices")
-        doorContainer.appendChild(this.element)
+        doorContainer.prepend(this.element)
         return this.element // <--
     }
 }

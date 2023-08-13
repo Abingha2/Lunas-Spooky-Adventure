@@ -1,7 +1,7 @@
 .narrator{
     background-color:black;
-    position: relative;
     color:white;
+    float: left;
 }
 #choices{
   border: 2px solid rgb(0, 0, 255);
@@ -48,4 +48,37 @@
     height: 90vh;
     border: 2px solid black;
   }
+}
+
+#room {
+  background-color: purple;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  float: left; 
+}
+
+#timer{
+
+}
+
+#lives {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid white;
+  margin: 4px 0px 0px 0px;
+  height: 28px;
+  display: block;
+  width: 144px;
+  position: relative;
+}
+
+#lives::-webkit-progress-value {
+  background: url("../img/lives.png") repeat-x;
+  background-size: 28px 28px;
+}
+
+#lives::-webkit-progress-bar {
+  background-color: #000;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }

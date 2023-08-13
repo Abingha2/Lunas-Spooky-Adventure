@@ -14,6 +14,7 @@ class Dialog{
         //changes the visability(hides the element until ready)
         this.element.style.display = "none"
         this.element.style.height=`${height}%`
+        this.element.style.margin = `${(100 - width) / 2}%`
         this.element.style.width=`${width}%`
         //this tells the program when to not display the text
         this.displayed = false
