@@ -12,9 +12,9 @@ let lifeCounter
 //layout of library?
 async function ready() {
   root = document.querySelector("#root")
-  player = new Player("player1", 5)
+  player = new Player("player1", 6)
   narrator = new Dialog(95, 30)
-  lifeCounter = new Lives(5)
+  lifeCounter = new Lives(6)
   new Door(0, handleDoorAndTimer)
   new Door(1, handleDoorAndTimer)
   new Door(2, handleDoorAndTimer)
@@ -59,13 +59,13 @@ async function winCheck(){
 async function handleLose(){
     narrator.show("You Lose the Game. Are you sure you don't want to play again, Luna needs your help finding her way home! Push any button to play again" ,2.5,67.5) 
     GameState.roomNumber = 0
-    player.lives = 5
+    player.lives = 6
 }
 
 async function handleWin(){
   narrator.show("You win! Congrats Luna made it home safely! To play again click any button.",2.5,67.5)
   GameState.roomNumber = 0
-  player.lives = 5
+  player.lives = 6
 }
 
 async function handleDoorAndTimer(door, timeout) {
