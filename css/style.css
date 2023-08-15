@@ -1,60 +1,64 @@
-.narrator{
-    background-color:black;
-    color:white;
-    float: left;
+.narrator {
+  background-color: black;
+  color: white;
+  float: left;
 }
 
 #choices .door {
-  background-color:red;
-  width:25%;
-  height:8%;
+  background-color: red;
+  width: 25%;
+  height: 8%;
   max-width: 240px;
-  
+
 }
 
 
 #choices .door:nth-child(1) {
   transform: rotate(90deg);
   position: relative;
-  top:39%;
-  left:85%;
+  top: 39%;
+  left: 84.5%;
 }
 
 #choices .door:nth-child(2) {
-  background-color:green;
-  display:flex;
-  position:relative;
-  top:83%;
-  left:37.5%;
-  
+  background-color: green;
+  display: flex;
+  position: relative;
+  top: 83%;
+  left: 37.5%;
+
 }
 
 #choices .door:nth-child(3) {
-  background-color:blue;
+  background-color: blue;
   transform: rotate(90deg);
   position: relative;
-  top:22%;
-  left:-10.5%;
+  top: 22%;
+  left: -40%;
 
 }
 
-#choices{
+#choices {
   border: 2px solid rgb(0, 0, 255);
-  width:100%;
-  height:65%;
+  width: 100%;
+  height: 65%;
   z-index: 2;
   position: relative;
-  float:left;
+  float: left;
+  background: url("../img/room.png") no-repeat;
+  background-size: contain;
 }
+
 /* Portrait */
 @media screen and (orientation:portrait) {
-  
-#root {
-  width: 90vw;
-  height: 90vw;
-  border: 2px solid black;
+
+  #root {
+    width: 90vw;
+    height: 90vw;
+    border: 2px solid black;
+  }
 }
-}
+
 /* Landscape */
 @media screen and (orientation:landscape) {
   #root {
@@ -64,25 +68,25 @@
   }
 }
 
- #room {
- background-color: purple;
- position: relative;
+#room {
+  background-color: purple;
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  float:left;
-} 
+  float: left;
+}
 
 
-#timer{
-position: absolute;
-top: 20px;
-left: 20px;
-border:2px solid black;
-border-radius: 23% 17% 0% 0%;
-width:3%;
-aspect-ratio: 1/1;
-padding:2vw 2vw;
-animation: amorphous 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+#timer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 2px solid black;
+  border-radius: 23% 17% 0% 0%;
+  width: 3%;
+  aspect-ratio: 1/1;
+  padding: 2vw 2vw;
+  animation: amorphous 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes amorphous {
@@ -90,38 +94,48 @@ animation: amorphous 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
   5% {
     border-radius: 80% 63% 0% 0%;
   }
-  10%{
+
+  10% {
     border-radius: 20% 29% 0% 0%;
   }
-  20%{
+
+  20% {
 
     border-radius: 57% 20% 0% 0%;
   }
-  30%{
+
+  30% {
     border-radius: 20% 90% 0% 0%;
   }
-  40%{
+
+  40% {
     border-radius: 24% 63% 0% 0%;
   }
-  50%{
+
+  50% {
     border-radius: 80% 20% 0% 0%;
     transform: rotate(180deg);
   }
-  60%{
+
+  60% {
 
     border-radius: 41% 17% 0% 0%;
   }
-  70%{
+
+  70% {
 
     border-radius: 97% 84% 0% 0%;
   }
-  80%{
+
+  80% {
     border-radius: 28% 49% 0% 0%;
   }
-  90%{
+
+  90% {
     border-radius: 100% 36% 0% 0%;
   }
-  100%{
+
+  100% {
     border-radius: 35% 30% 0% 0%;
     transform: rotate(360deg);
   }
@@ -136,8 +150,8 @@ animation: amorphous 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
   display: block;
   width: 22%;
   position: relative;
-  top:-25%;
-  right:-75%;
+  top: -25%;
+  right: -75%;
 }
 
 #lives::-webkit-progress-value {
@@ -149,4 +163,15 @@ animation: amorphous 1s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: #000;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+#player {
+  background: url(../img/luna_player.gif) no-repeat;
+  background-size: contain;
+  width: 30%;
+  height: inherit;
+  position: relative;
+  top: -10%;
+  left: 35%;
+  float: left;
 }
