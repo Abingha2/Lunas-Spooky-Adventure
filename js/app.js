@@ -15,6 +15,7 @@ async function ready() {
   player = new Player("player1", 6)
   narrator = new Dialog(95, 30)
   lifeCounter = new Lives(6)
+  alert("Welcome to Luna's Spooky Adventure!\n\nHelp Luna make it from the doghouse to the back porch by correctly guessing which direction the danger is coming from!\n\nClick on either the red, green, or blue door to make your choice.")
   new Door(0, handleDoorAndTimer)
   new Door(1, handleDoorAndTimer)
   new Door(2, handleDoorAndTimer)
